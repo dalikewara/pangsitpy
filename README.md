@@ -18,7 +18,7 @@ pip3 install pangsitpy
 ### Get the latest version
 
 This package updates frequently, so make sure you're using the latest version
-to get latest logical processes or new modules to work with.
+for better logical processes or to get new modules to work with.
 You can read the
 [CHANGELOG.md](https://github.com/dalikewara/pangsitpy/blob/master/CHANGELOG.md)
 
