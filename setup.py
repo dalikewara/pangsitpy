@@ -6,11 +6,11 @@ with open('requirements.txt') as f:
     install_requires = f.read().splitlines()
 setuptools.setup(
     name="pangsitpy",
-    version="0.0.6",
+    version="0.0.7",
     author="Dali Kewara",
     license="MIT",
     author_email="dalikewara@gmail.com",
-    description="Pangsit (py) is my starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning, Data Science, etc.",
+    description="Pangsit(py) is my starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning, Data Science, etc.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/dalikewara/pangsitpy",

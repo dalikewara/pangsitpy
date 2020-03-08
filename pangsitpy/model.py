@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 
-def visualize_training(model, output_file=None):
+def visualize_training(model, acc_output_file=None, loss_output_file=None):
     h = model.history
     h_acc = h.history['acc']
     h_val_acc = h.history['val_acc']
@@ -13,8 +13,8 @@ def visualize_training(model, output_file=None):
     plt.plot(epochs, h_val_acc, 'b', label='Validation acc')
     plt.title('Training and validation accuracy')
     plt.legend()
-    if output_file:
-        plt.savefig(output_file + '.acc.png')
+    if acc_output_file:
+        plt.savefig(acc_output_file)
     else:
         plt.show()
     plt.figure()
@@ -22,7 +22,7 @@ def visualize_training(model, output_file=None):
     plt.plot(epochs, h_val_loss, 'b', label='Validation loss')
     plt.title('Training and validation loss')
     plt.legend()
-    if output_file:
-        plt.savefig(output_file + '.loss.png')
+    if loss_output_file:
+        plt.savefig(loss_output_file)
     else:
         plt.show()

@@ -1,6 +1,6 @@
-# Pangsit (py)
+# Pangsit(py)
 
-Pangsit (py) is my starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning,
+Pangsit(py) is my starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning,
 Data Science, etc.
 
 > I'll create a documentation for this later.

@@ -37,6 +37,12 @@
 
 # Changelogs
 
+### 0.0.7
+- Updated module:
+  - model
+    - visualize_training
+      > Removed argument `output_file=None`, changed to (`acc_output_file=None`, `loss_output_file=None`)
+
 ### 0.0.6
 - Added new modules:
   - audio_processing
