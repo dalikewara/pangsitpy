@@ -3,6 +3,7 @@ from PIL import Image
 from skimage.io import imread, imsave
 from skimage.transform import resize as imresize
 
+
 def combine_and_save(source_files, output_file, arrangement='horizontal'):
     images = [Image.open(x) for x in source_files]
     widths, heights = zip(*(i.size for i in images))
@@ -20,7 +21,8 @@ def combine_and_save(source_files, output_file, arrangement='horizontal'):
             new_im.paste(im, (x_offset, 0))
         x_offset += im.size[0]
     new_im.save(output_file)
-    
+
+
 def resize_and_save(source_file, output_file, target_size=(64, 64), grayscale=False):
     img = imread(source_file, as_gray=grayscale)
     img = imresize(img, target_size, anti_aliasing=True)

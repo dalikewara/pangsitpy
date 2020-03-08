@@ -6,8 +6,9 @@ from parselmouth.praat import run_file
 praat_sourcerun = os.path.join(os.path.dirname(__file__), 'praat/myspsolution.praat')
 temp_dir = os.path.join(os.path.dirname(__file__), '../.temp')
 
+
 def extract_pisr(source_file, praat_sourcerun=praat_sourcerun,
-                temp_dir=temp_dir):
+                 temp_dir=temp_dir):
     sound = parselmouth.Sound(source_file)
     pitch = sound.to_pitch(pitch_ceiling=500.0)
     pitch_values = pitch.selected_array['frequency']

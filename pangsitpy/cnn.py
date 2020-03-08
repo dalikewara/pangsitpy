@@ -4,9 +4,9 @@ from keras.layers import Conv2D, Conv1D, MaxPooling2D, MaxPooling1D, BatchNormal
 from keras.models import Model
 
 
-def audio_image_1(audio_shape=(), image_shape=(), total_labels=1,
-                  output_file=None, output_filename=None, optimizer=None,
-                  loss=None, metrics=None):
+def cnn_audio_image_1(audio_shape=(), image_shape=(), total_labels=1,
+                      plot_to_file=None, optimizer=None, loss=None,
+                      metrics=None):
     input_1 = Input(shape=audio_shape)
     inpt1 = Conv1D(64, kernel_size=1, activation='relu')(input_1)
     inpt1 = MaxPooling1D(pool_size=1)(inpt1)
@@ -32,9 +32,9 @@ def audio_image_1(audio_shape=(), image_shape=(), total_labels=1,
     multi = Dropout(0.2)(multi)
     out = Dense(total_labels, activation='softmax')(multi)
     model = Model(inputs=[input_1, input_2], outputs=out)
-    if output_file:
-        plot_model(model, to_file=output_file + '.' + (output_filename or 'figure.png'),
-                   show_shapes=True, show_layer_names=True)
+    if plot_to_file:
+        plot_model(model, to_file=plot_to_file, show_shapes=True,
+                   show_layer_names=True)
     model.compile(optimizer=(optimizer or 'adam'),
                   loss=(loss or 'categorical_crossentropy'),
                   metrics=(metrics or ['acc']))

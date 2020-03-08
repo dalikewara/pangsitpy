@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+
 def visualize_training(model, output_file=None):
     h = model.history
     h_acc = h.history['acc']

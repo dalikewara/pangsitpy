@@ -1,7 +1,7 @@
 import speech_recognition as sr
 
 
-def transcript_from_file(source_file, lang='id-ID', engine='google-api'):
+def transcript_from_file(source_file, lang='en-EN', engine='google-api'):
     r = sr.Recognizer()
     file_source = sr.AudioFile(source_file)
     with file_source as source:

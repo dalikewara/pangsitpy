@@ -4,6 +4,7 @@ from skimage.io import imread
 from skimage.transform import resize as imresize
 from keras.preprocessing.image import load_img, img_to_array
 
+
 def extract_to_array(source_file, target_size=(64, 64), engine='skimage',
                      grayscale=False, resize=False, labels=None,
                      array_to_int=False, types=None):
@@ -39,9 +40,10 @@ def extract_to_array(source_file, target_size=(64, 64), engine='skimage',
                     img_label = lbl[1]
                 except:
                     img_label = 0
-    for tp in types:
-        if (tp[0] != '') and (re.search('' + tp[0], filename) != None):
-            img_type = tp[0]
+    if types:
+        for tp in types:
+            if (tp[0] != '') and (re.search('' + tp[0], filename) != None):
+                img_type = tp[0]
     return {
         "array": img_array,
         "shape": img_shape,
