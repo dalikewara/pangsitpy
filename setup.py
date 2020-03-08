@@ -6,7 +6,7 @@ with open('requirements.txt') as f:
     install_requires = f.read().splitlines()
 setuptools.setup(
     name="pangsitpy",
-    version="0.0.5",
+    version="0.0.6",
     author="Dali Kewara",
     license="MIT",
     author_email="dalikewara@gmail.com",

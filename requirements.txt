@@ -22,6 +22,7 @@ Keras-Preprocessing==1.1.0
 kiwisolver==1.1.0
 librosa==0.7.2
 llvmlite==0.31.0
+logmmse==1.4
 Markdown==3.2.1
 matplotlib==3.2.0
 mlxtend==0.17.2
@@ -38,6 +39,7 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.20
 pydot==1.4.1
+pydub==0.23.1
 pyparsing==2.4.6
 PySastrawi==1.2.0
 python-dateutil==2.8.1
