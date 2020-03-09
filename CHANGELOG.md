@@ -1,95 +1,65 @@
-# Available modules
-
-- audio_extraction
-  - extract_pisr
-- audio_to_image
-  - pitch_figure
-  - intensity_figure
-- audio_to_text
-  - transcript_from_file
-- audio_processing
-  - get_audio_duration
-  - reduce_noise
-  - trim_silence
-  - trim_audio
-- cnn
-  - cnn_audio_image_1
-- confusion_matrix
-  - calc_cm
-- image_extraction
-  - extract_to_array
-- image_processing
-  - combine_and_save
-  - resize_and_save
-- model
-  - visualize_training
-- remove_numbers
-  - remove_punctuations
-  - remove_stopwords
-  - clean_text
-  - stemming
-- scaling
-  - min_max_scaler
-  - standart_scaler
-- text_tokenizer
-  - tokenize
-  - tokenize_from_csv
-
 # Changelogs
 
+### 0.0.8
+
+- Update module `model`
+    - def `visualize_training`
+        > Update logical process
+
 ### 0.0.7
-- Updated module:
-  - model
-    - visualize_training
-      > Removed argument `output_file=None`, changed to (`acc_output_file=None`, `loss_output_file=None`)
+- Update module `model`
+    - def `visualize_training`
+        > Argument `output_file=None` is now disabled, use (`acc_output_file=None`, `loss_output_file=None`) instead.
+        
+        > Add new argument `metrics=('acc', 'loss')`. Support for keras's metrics.
 
 ### 0.0.6
-- Added new modules:
-  - audio_processing
-    - get_audio_duration
-    - reduce_noise
-    - trim_silence
-    - trim_audio
-  - text_processing
-    - remove_numbers
-    - remove_punctuations
-    - remove_stopwords
-    - clean_text
-    - stemming
-  - scaling
-    - min_max_scaler
-    - standart_scaler
+- Add new module `audio_processing`
+    - def `get_audio_duration`
+    - def `reduce_noise`
+    - def `trim_silence`
+    - def `trim_audio`
+- Add new module `text_processing`
+    - def `remove_numbers`
+    - def `remove_punctuations`
+    - def `remove_stopwords`
+    - def `clean_text`
+    - def `stemming`
+- Add new module `scaling`
+    - def `min_max_scaler`
+    - def `standart_scaler`
   
 ### 0.0.5
-- Updated modules:
-  - cnn
-  - confusion_matrix
-  - image_extraction
+- Update module `cnn`
+    > Update logical process
+- Update module `confusion_matrix`
+    > Update logical process
+- Update module `image_extraction`
+    > Update logical process
 
 ### 0.0.4
-- Initial commit
-- Initial modules:
-  - audio_extraction
-    - extract_pisr
-  - audio_to_image
-    - pitch_figure
-    - intensity_figure
-  - audio_to_text
-    - transcript_from_file
-  - cnn
-    - cnn_audio_image_1
-  - confusion_matrix
-    - calc_cm
-  - image_extraction
-    - extract_to_array
-  - image_processing
-    - combine_and_save
-    - resize_and_save
-  - model
-    - visualize_training
-  - text_tokenizer
-    - tokenize
-    - tokenize_from_csv
+- Initial release
+- Add new module `audio_extraction`
+    - def `extract_pisr`
+- Add new module `audio_to_image`
+    - def `pitch_figure`
+    - def `intensity_figure`
+- Add new module `audio_to_text`
+    - def `transcript_from_file`
+- Add new module `cnn`
+    - def `cnn_audio_image_1`
+- Add new module `confusion_matrix`
+    - def `calc_cm`
+- Add new module `image_extraction`
+    - def `extract_to_array`
+- Add new module `image_processing`
+    - def `combine_and_save`
+    - def `resize_and_save`
+- Add new module `model`
+    - def `visualize_training`
+- Add new module `text_tokenizer`
+    - def `tokenize`
+    - def `tokenize_from_csv`
 
 ### 0.0.1 - 0.0.3
-- Test
+- Test release
