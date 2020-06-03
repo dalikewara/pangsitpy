@@ -1,5 +1,24 @@
 # Changelogs
 
+### 0.0.10
+
+
+- Update module `model`
+    - def `visualize_training`
+        > Updated some scripts
+- Update module `scaling`
+    - def `min_max_scaler`
+        > Updated conditional `fit_from_data` in `if` statement
+    - def `standart_scaler`
+        > Updated conditional `fit_from_data` in `if` statement
+
+### 0.0.9
+
+- Update `README.md`
+- Update module `model`
+    - def `visualize_training`
+        > Add label x-axis & y-axis to plot figure
+
 ### 0.0.8
 
 - Update module `model`

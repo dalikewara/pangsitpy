@@ -1,7 +1,8 @@
 # Pangsit(py)
 
 Pangsit(py) is my starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning,
-Data Science, etc.
+Data Science, etc. Of course I don't built it from scratch. I use some existing modules such as `keras`, 
+`tensorflow`, `scikit`, etc, to help me doing Machine/Deep Learning jobs.
 
 > I'll create a documentation for this later.
 

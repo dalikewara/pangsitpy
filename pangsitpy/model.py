@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 def visualize_training(model, metrics=('acc', 'loss'), acc_output_file=None,
                        loss_output_file=None,
-                       # removed since (0.0.8)
+                       # disabled since (0.0.8)
                        output_file=None):
     h = model.history
     h_acc = h.history[metrics[0]]
@@ -17,6 +17,8 @@ def visualize_training(model, metrics=('acc', 'loss'), acc_output_file=None,
         plt.title('Training and validation ' + metrics[0])
     except:
         plt.title('Training ' + metrics[0])
+    plt.xlabel("epoch")
+    plt.ylabel(metrics[0])
     plt.legend()
     if output_file:
         print('This argument was removed. Please use (acc_output_file=None) or (loss_output_file=None) instead.')
@@ -32,6 +34,8 @@ def visualize_training(model, metrics=('acc', 'loss'), acc_output_file=None,
         plt.title('Training and validation ' + metrics[1])
     except:
         plt.title('Training ' + metrics[1])
+    plt.xlabel("epoch")
+    plt.ylabel(metrics[1])
     plt.legend()
     if loss_output_file:
         plt.savefig(loss_output_file)

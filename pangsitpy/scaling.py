@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
@@ -5,7 +6,7 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 def min_max_scaler(data_to_scale, fit_from_data=None, fit_from_file=None,
                    drop_columns=None):
     scaler = MinMaxScaler()
-    if fit_from_data:
+    if np.array(fit_from_data).any():
         scaler.fit(fit_from_data)
     elif fit_from_file:
         df = pd.read_csv(fit_from_file, engine='python', encoding='latin-1', skipinitialspace=True)
@@ -24,7 +25,7 @@ def min_max_scaler(data_to_scale, fit_from_data=None, fit_from_file=None,
 def standart_scaler(data_to_scale, fit_from_data=None, fit_from_file=None,
                     drop_columns=None):
     scaler = StandardScaler()
-    if fit_from_data:
+    if np.array(fit_from_data).any():
         scaler.fit(fit_from_data)
     elif fit_from_file:
         df = pd.read_csv(fit_from_file, engine='python', encoding='latin-1', skipinitialspace=True)
