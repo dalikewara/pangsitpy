@@ -1,7 +1,6 @@
 # Changelogs
 
-### 0.0.10
-
+### 0.0.10 - 0.0.12
 
 - Update module `model`
     - def `visualize_training`
