@@ -1,5 +1,9 @@
 # Changelogs
 
+### 0.0.14
+
+- Update `tensorflow` version to `2.2.0`
+
 ### 0.0.13
 
 - Update module `model`
